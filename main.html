@@ -1,16 +1,56 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+<style>
+  form {
+    max-width: 600px;
+    margin: 10px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input[type="text"], input[type="url"], input[type="range"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  input[type="range"] {
+    width: auto;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+</style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+<form>
+  <h2>Feedback Form</h2>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" minlength="3" maxlength="50" required>
 
+  <label for="portfolio">Portfolio:</label>
+  <input type="url" id="portfolio" name="portfolio" required>
+
+  <label for="favColor">Favorite Color:</label>
+  <select id="favColor" name="favColor">
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="yellow">Yellow</option>
+    <option value="other">Other</option>
+  </select>
+
+  <label for="likeness">Likeness:</label>
+  <input type="range" id="likeness" name="likeness" min="1" max="100">
+
+  <button type="submit">Submit</button>
+</form>
 </body>
-
 </html>
